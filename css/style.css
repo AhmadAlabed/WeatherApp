@@ -1,0 +1,72 @@
+/* body {
+  min-height: 2000px;
+} */
+nav {
+  background-color: rgba(0, 0, 0, 0.253) !important;
+}
+
+header {
+  height: 60vh;
+  background-image: url(../img/Weather.jpg);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom: 3px solid #ff652f;
+}
+.underLogo {
+  font-size: 12px;
+}
+.overly {
+  background-color: rgba(0, 0, 0, 0.171);
+}
+
+.bg-dark-color {
+  /* background-color: #272727; */
+  background-color: #3d3d3d;
+}
+.bg-light-color {
+  background-color: #747474;
+}
+.text-main-color {
+  color: #ff652f;
+}
+.text-secondary-color {
+  color: whitesmoke;
+}
+.text-other-color {
+  color: rgb(188, 207, 12);
+}
+
+.currentLocation {
+  padding: 6px;
+  margin: 10px 0 10px 0;
+  background-color: rgba(0, 0, 0, 0.171);
+  font-size: 12px;
+  cursor: pointer;
+}
+.cityHistory {
+  padding: 6px;
+  margin: 10px 0 10px 0;
+  background-color: rgba(0, 0, 0, 0.171);
+  font-size: 12px;
+}
+.cityHistory div {
+  cursor: pointer;
+}
+.cityHistory i {
+  cursor: pointer;
+}
+#autocompleteCities {
+  max-height: 100px;
+  overflow-y: auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+.list-group-item {
+  cursor: pointer;
+}
+.list-group-item:hover {
+  background-color: #3d3d3d;
+  color: #ff652f;
+}

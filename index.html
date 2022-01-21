@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="icon" href="img/iconImage.png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- BootStrap Style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+          <a class="navbar-brand d-flex" href="#">
+            <i class="fas fa-cloud fs-1 text-main-color pe-2"></i>
+              <div>
+              <p class="fs-6 fw-bold m-0 p-0 text-other-color">Weather</p>
+              <p class="m-0 p-0 text-secondary-color underLogo">The Weather Today</p>
+              </div>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <div class="nav-link">
+                  <a class=" btn btn-dark btn-sm text-warning" aria-current="page" href="#" id="C">℃</a>
+                  <a class=" btn btn-outline-dark btn-sm text-warning" aria-current="page" href="#" id="F">℉</a>
+                </div>
+                
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+    <header class="bg-primary">
+        <div class="overly h-100 w-100 d-flex justify-content-center align-items-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3  col-md-8 offset-md-2">
+                <div class="position-relative">
+                  <div class="input-group">
+                    <input id="searchlocation" type="search" class="form-control" placeholder="Search on location..."  aria-describedby="buttonSearchlocation">              
+                    <button class="btn btn-primary" type="button" id="buttonSearchlocation"><i class="fas fa-search"></i></button>
+                  </div>
+                  <ul id="autocompleteCities" class="list-group">
+                  </ul>
+                  <div class="currentLocation text-secondary-color"><i class="fas fa-location-arrow me-2"></i><span id="currentLocationText">Use your current Location:</span></div>
+                  <div id="locationHistory">
+
+                    <!-- ----- -->
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+        </div>
+    </header>
+
+
+
+    <section class="weather ">
+
+        <div class="container text-secondary-color py-3">
+            <div class="row">
+                <div class="col-md-4 bg-dark-color">
+                  <div id="currentDayBox" class="py-2">
+                    <div class="boxHeader d-flex justify-content-between mb-3">
+                      <span id="currentDay" class="text-main-color">------</span>
+                      <span id="currentMonth" class="text-main-color">------</span>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div>
+                        <h1 id="locationName" class="text-main-color">-----</h1>
+                        <h2 id="currentDayTemp" class="text-secondary-color display-2 fw-bold my-3">----</h2>
+                        <p id="weatherState" class=" my-4 text-other-color">----</p>
+                      </div>
+                      <div>
+                        <img id="currentDayIconWeather"  alt="">
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <i class="fas fa-umbrella text-other-color"></i>
+                        <span id="dailyChanceOfRain">---</span>
+                      </div>
+                      <div>
+                        <i class="fas fa-wind text-other-color"></i>
+                        <span id="windKph">--km/h</span>
+                      </div>
+                      <div>
+                        <i class="far fa-compass text-other-color"></i>
+                        <span id="windDir">----</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 text-secondary-color bg-light-color">
+                    <div id="tomorrowBox" class="text-center py-2">
+                      <p id="tomorrowDay" class="text-secondary-color">------</p>
+                      <img id="tomorrowIconWeather" src=" " alt="">
+                      <h2 id="tomorrowMaxTemp" class="text-secondary-color display-6 fw-bold">-----</h2>
+                      <h3 id="tomorrowMixTemp" class="text-secondary-color">----</h3>
+                      <p id="tomorrowWeatherState" class=" my-4 text-other-color">-----</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-secondary-color bg-dark-color">
+                    <div id="afterTomorrowBox" class="text-center py-2">
+                      <p id="afterTomorrowDay" class="text-secondary-color">------</p>
+                      <img id="afterTomorrowIconWeather" src=" " alt="">
+                      <h2 id="afterTomorrowMaxTemp" class="text-secondary-color display-6 fw-bold">-----</h2>
+                      <h3 id="afterTomorrowMixTemp" class="text-secondary-color">----</h3>
+                      <p id="afterTomorrowWeatherState" class=" my-4 text-other-color">-----</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+
+
+
+    <footer>
+      <div class="container border-top border-top-1 border-light text-light mt-5">
+          <p class="py-2">© 2021 Weather App. Powered by <span class="text-muted"><a href="https://github.com/AhmadAlabed" class="link-info" target="_blank">Ahmad Alabed</a></span></p>
+      </div>
+    </footer>
+
+    <!-- BootStrap Script -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Main Script -->
+    <script src="js/main.js"></script>
+</body>
+</html>
